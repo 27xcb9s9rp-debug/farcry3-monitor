@@ -30,8 +30,9 @@ def send_discord(message, color):
             "title": "Far Cry 3 — Quazal PC",
             "description": message,
             "color": color,
-            "url": API_URL,
-            "footer": {"text": "Server status monitor"},
+            "footer": {
+                "text": "Server status monitor"
+            },
         }],
     }
 
@@ -138,7 +139,6 @@ def main():
     message = (
         f"{icon} **Server update detected**\n\n"
         + "\n".join(changes)
-        + f"\n\n{API_URL}"
     )
 
     color = (
@@ -147,8 +147,6 @@ def main():
         else 0xE74C3C
     )
 
-    # Send before saving state.
-    # If Discord fails, state remains unchanged and retry occurs next run.
     send_discord(message, color)
 
     STATE_FILE.write_text(
