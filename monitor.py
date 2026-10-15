@@ -1,9 +1,9 @@
 import json
 import os
-import urllib.request
 import urllib.error
+import urllib.request
 
-WEBHOOK_URL = os.environ["DISCORD_WEBHOOK_URL"]
+WEBHOOK_URL = os.environ["DISCORD_WEBHOOK_URL"].strip()
 
 print("Testing Discord webhook...")
 print("Webhook starts with:", WEBHOOK_URL[:40])
@@ -18,7 +18,12 @@ request = urllib.request.Request(
     WEBHOOK_URL,
     data=body,
     headers={
-        "Content-Type": "application/json"
+        "Content-Type": "application/json",
+        "User-Agent": (
+            "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+            "AppleWebKit/537.36 (KHTML, like Gecko) "
+            "Chrome/140.0.0.0 Safari/537.36"
+        ),
     },
     method="POST",
 )
@@ -28,17 +33,13 @@ try:
         print("SUCCESS")
         print("HTTP status:", response.status)
 
-except urllib.error.HTTPError as e:
+except urllib.error.HTTPError as error:
     print("FAILED")
-    print("HTTP status:", e.code)
-
+    print("HTTP status:", error.code)
     print("Response headers:")
-    print(e.headers)
+    print(error.headers)
 
-    try:
-        print("Response body:")
-        print(repr(e.read().decode("utf-8", errors="replace")))
-    except Exception as ex:
-        print("Could not read response body:", ex)
+    body = error.read().decode("utf-8", errors="replace")
+    print("Response body:", repr(body))
 
     raise
