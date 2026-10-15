@@ -16,7 +16,14 @@ def get_json(url):
         url,
         headers={"User-Agent": "FarCry3-Discord-Monitor/1.0"},
     )
+try:
     with urllib.request.urlopen(request, timeout=20) as response:
+        print("Discord response:", response.status)
+except urllib.error.HTTPError as e:
+    print("Discord error code:", e.code)
+    print("Discord error body:", e.read().decode())
+    raise
+
         return json.loads(response.read().decode("utf-8"))
 
 
