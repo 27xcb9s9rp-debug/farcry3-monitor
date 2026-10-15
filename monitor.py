@@ -2,7 +2,6 @@ import json
 import os
 import sys
 import urllib.request
-import urllib.error
 from pathlib import Path
 
 API_URL = "https://kadabra.warehouse.games/servers/quazal/farcry3/pc"
@@ -31,7 +30,7 @@ def send_discord(message, color):
             "description": message,
             "color": color,
             "footer": {
-                "text": "Server status monitor"
+                "text": "Session Monitor"
             },
         }],
     }
@@ -76,11 +75,6 @@ def main():
 
     players = int(players)
 
-    if players < 0:
-        raise ValueError(
-            "Invalid negative player count"
-        )
-
     current = {
         "status": status,
         "player_count": players,
@@ -107,45 +101,43 @@ def main():
         )
         return
 
-    old_status = previous.get("status")
-    old_players = previous.get("player_count")
+    old_players = int(
+        previous.get("player_count", 0)
+    )
 
-    changes = []
+    # Session start
+    if old_players == 0 and players > 0:
 
-    if old_status != status:
-        changes.append(
-            f"**Status:** "
-            f"{old_status.upper()} → "
-            f"{status.upper()}"
+        message = (
+            "🎮 Multiplayer game started!\n\n"
+            "Join the game!"
         )
 
-    if old_players != players:
-        changes.append(
-            f"**Players:** "
-            f"{old_players} → "
-            f"{players}"
+        color = 0x2ECC71
+
+    # Session end
+    elif old_players > 0 and players == 0:
+
+        message = (
+            "🏁 Multiplayer game ended"
         )
 
-    if not changes:
-        print("No change detected.")
+        color = 0xE74C3C
+
+    # Ignore all other player count changes
+    else:
+        print(
+            "No session start/end detected."
+        )
+
+        STATE_FILE.write_text(
+            json.dumps(
+                current,
+                indent=2
+            ) + "\n"
+        )
+
         return
-
-    icon = (
-        "🟢"
-        if status == "online"
-        else "🔴"
-    )
-
-    message = (
-        f"{icon} **Server update detected**\n\n"
-        + "\n".join(changes)
-    )
-
-    color = (
-        0x2ECC71
-        if status == "online"
-        else 0xE74C3C
-    )
 
     send_discord(message, color)
 
@@ -157,7 +149,7 @@ def main():
     )
 
     print(
-        "Change announced and state saved."
+        "Session notification sent."
     )
 
 
