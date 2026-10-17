@@ -1,7 +1,5 @@
 {
   "status": "online",
-  "player_count": 1,
-  "players": {
-    "2046": "TheRavidor2011"
-  }
+  "player_count": 0,
+  "players": {}
 }
