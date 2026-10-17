@@ -1,7 +1,9 @@
 {
   "status": "online",
-  "player_count": 1,
+  "player_count": 3,
   "players": {
-    "2810": "JosseTheGamerX"
+    "2810": "JosseTheGamerX",
+    "2811": "pierosebas8",
+    "2813": "Shiroi_Ak"
   }
 }
