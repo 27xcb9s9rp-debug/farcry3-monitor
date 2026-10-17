@@ -1,4 +1,7 @@
 {
   "status": "online",
-  "player_count": 1
+  "player_count": 1,
+  "players": {
+    "2795": "All4n442"
+  }
 }
