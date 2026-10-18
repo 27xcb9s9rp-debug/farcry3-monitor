@@ -1,7 +1,8 @@
 {
   "status": "online",
-  "player_count": 3,
+  "player_count": 4,
   "players": {
+    "2238": "guest-v1x4FfNK",
     "2815": "JoshMiller9116",
     "2817": "DuskeTDown",
     "2818": "Alythmioh"
