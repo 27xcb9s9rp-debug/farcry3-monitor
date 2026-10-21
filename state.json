@@ -1,7 +1,8 @@
 {
   "status": "online",
-  "player_count": 1,
+  "player_count": 2,
   "players": {
-    "2484": "robo.788"
+    "2484": "robo.788",
+    "2816": "NENAD.19"
   }
 }
