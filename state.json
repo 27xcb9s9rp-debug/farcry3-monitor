@@ -1,7 +1,8 @@
 {
   "status": "online",
-  "player_count": 1,
+  "player_count": 2,
   "players": {
-    "2821": "cane1018"
+    "2821": "cane1018",
+    "2822": "Wolfriser1"
   }
 }
