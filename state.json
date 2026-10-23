@@ -1,5 +1,7 @@
 {
   "status": "online",
-  "player_count": 0,
-  "players": {}
+  "player_count": 1,
+  "players": {
+    "2828": "gg070abe"
+  }
 }
