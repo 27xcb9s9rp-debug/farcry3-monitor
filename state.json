@@ -1,7 +1,9 @@
 {
   "status": "online",
-  "player_count": 1,
+  "player_count": 3,
   "players": {
-    "2785": "Olipap123"
+    "2785": "Olipap123",
+    "2816": "NENAD.19",
+    "2830": "BIRESH7005"
   }
 }
