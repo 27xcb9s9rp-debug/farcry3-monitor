@@ -1,9 +1,7 @@
 {
   "status": "online",
-  "player_count": 3,
+  "player_count": 1,
   "players": {
-    "2720": "OddDinosaur7517",
-    "2831": "guest-IK46XKwX",
-    "2832": "KamiKaze_000"
+    "2720": "OddDinosaur7517"
   }
 }
