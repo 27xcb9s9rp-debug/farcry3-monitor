@@ -1,7 +1,5 @@
 {
   "status": "online",
-  "player_count": 1,
-  "players": {
-    "2834": "raven"
-  }
+  "player_count": 0,
+  "players": {}
 }
