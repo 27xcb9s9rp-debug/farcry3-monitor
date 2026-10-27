@@ -1,7 +1,8 @@
 {
   "status": "online",
-  "player_count": 1,
+  "player_count": 2,
   "players": {
-    "2835": "Filx228"
+    "2835": "Filx228",
+    "2836": "LandaSnakeTW"
   }
 }
