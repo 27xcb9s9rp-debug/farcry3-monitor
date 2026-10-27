@@ -1,5 +1,8 @@
 {
   "status": "online",
-  "player_count": 0,
-  "players": {}
+  "player_count": 2,
+  "players": {
+    "1000": "halvors",
+    "2744": "LTPeMaverick"
+  }
 }
