@@ -1,7 +1,5 @@
 {
   "status": "online",
-  "player_count": 1,
-  "players": {
-    "1000": "halvors"
-  }
+  "player_count": 0,
+  "players": {}
 }
