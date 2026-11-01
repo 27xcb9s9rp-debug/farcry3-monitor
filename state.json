@@ -1,7 +1,8 @@
 {
   "status": "online",
-  "player_count": 1,
+  "player_count": 2,
   "players": {
-    "2847": "Max_mks2024"
+    "2847": "Max_mks2024",
+    "2848": "namana16"
   }
 }
