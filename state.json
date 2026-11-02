@@ -1,8 +1,5 @@
 {
   "status": "online",
-  "player_count": 2,
-  "players": {
-    "2407": "LoganZueira",
-    "2816": "NENAD.19"
-  }
+  "player_count": 0,
+  "players": {}
 }
