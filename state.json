@@ -1,7 +1,5 @@
 {
   "status": "online",
-  "player_count": 1,
-  "players": {
-    "2850": "st1vis"
-  }
+  "player_count": 0,
+  "players": {}
 }
