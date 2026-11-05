@@ -1,7 +1,5 @@
 {
   "status": "online",
-  "player_count": 1,
-  "players": {
-    "2484": "robo.788"
-  }
+  "player_count": 0,
+  "players": {}
 }
