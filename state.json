@@ -1,7 +1,8 @@
 {
   "status": "online",
-  "player_count": 1,
+  "player_count": 2,
   "players": {
-    "2854": "teamseshuzi"
+    "2854": "teamseshuzi",
+    "2855": "EMOVIKI"
   }
 }
