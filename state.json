@@ -1,7 +1,8 @@
 {
   "status": "online",
-  "player_count": 2,
+  "player_count": 3,
   "players": {
+    "2850": "st1vis",
     "2859": "guest-ep1ZGWmf",
     "2860": "NotPharuzagan"
   }
